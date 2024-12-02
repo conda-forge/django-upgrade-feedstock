@@ -1,5 +1,5 @@
 {% set name = "django-upgrade" %}
-{% set version = "1.22.1" %}
+{% set version = "1.22.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8f003387595824e47aae1c5373d9ade7641145b9aac9f87ea1c4ddfa7aa375e0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8643abdde2961e3c60173ebee84f48371ffbec5181095a38cac080947af0d2ae
 
 build:
   number: 0
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python }}
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python }}
     - tokenize-rt >=4.1
 
 test:
@@ -34,6 +34,7 @@ test:
     - django-upgrade --help
   requires:
     - pip
+    - python {{ python }}
 
 about:
   home: https://github.com/adamchainz/django-upgrade
