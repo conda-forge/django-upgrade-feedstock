@@ -11,7 +11,7 @@ source:
   sha256: 8643abdde2961e3c60173ebee84f48371ffbec5181095a38cac080947af0d2ae
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - django-upgrade = django_upgrade.main:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python }}
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >={{ python }}
+    - python >={{ python_min }}
     - tokenize-rt >=4.1
 
 test:
@@ -34,7 +34,7 @@ test:
     - django-upgrade --help
   requires:
     - pip
-    - python {{ python }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/adamchainz/django-upgrade
