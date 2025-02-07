@@ -1,5 +1,5 @@
 {% set name = "django-upgrade" %}
-{% set version = "1.22.2" %}
+{% set version = "1.23.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8643abdde2961e3c60173ebee84f48371ffbec5181095a38cac080947af0d2ae
+  sha256: 5705f7e247068f82a34b82fb74890f256e4d1ed676c539707b731471d2bb11ac
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - django-upgrade = django_upgrade.main:main
