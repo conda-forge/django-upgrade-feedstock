@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: django-upgrade
-  version: "1.31.1"
+  version: "1.32.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 73161490d95c1e54ba8b6914ef11cd381edc556fc22ef0615bf34a9dac46f5a0
+  sha256: bc0e675aa4f8269fdec403367afa287ab593c7e350d5c09458b836906c914849
 
 build:
   number: 0
